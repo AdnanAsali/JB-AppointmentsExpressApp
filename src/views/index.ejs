@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="./main.css" type="text">
+    <link href="https://fonts.googleapis.com/css2?family=Montaga&display=swap" rel="stylesheet">
+    <title>Meetings and Appointments</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 class="title">Meetings' Selection </h1>
+        <div class="form-container">
+            <form action="/meetings" method="get">
+                <div class="calendar-container">
+                    <div class="calendar">
+                        <h3>From : </h3>
+                        <input type="time" name="from">
+                    </div>
+                    <div class="calendar">
+                        <h3>To : </h3>
+                        <input type="time" name="to" >
+                    </div>
+                </div>
+                <div class="meeting-details">
+                    <div class="meeting-input">
+                        <input type="text" placeholder="Enter Description ... " name="desc">
+                    </div>
+                    <div class="meeting-input">
+                        <input type="text" placeholder="Enter Room Number ... " name="room">
+                        <div class="dropdown">
+                            <select name="team" class="dropbtn">
+                                <% for(var j=0; j < teams.length; j++) { %>
+                                    <option class="opt" value="<%= teams[j] %>"> 
+                                        <%= teams[j] %> 
+                                    </option>
+                                <% } %>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <input type="submit" class="btn-hover color-2" value="Add Meeting">
+                <input type="submit" class="btn-hover color-2" value="Show All Meeting">
+            </form>
+        </div>
+
+
+        <div class="cards-container">
+            <% for(var i=0; i < ans.length; i++) { %>
+            <div class="card">
+                <div class="desc"> Desc :  <%= ans[i].descr %> </div>
+                <div class="room"> Room :  <%= ans[i].room %> </div>
+                <div class="from"> From :  <%= ans[i].fromDate %> </div>
+                <div class="to">   To  :  <%= ans[i].toDate %> </div>
+                <div class="team"> Team :  <%= ans[i].team_id %> </div>
+                <form action="" method="post">
+                    <input class="update btn-hover color-2" value="Update Meeting" type="submit">
+                </form>
+            </div>
+
+            <% } %>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

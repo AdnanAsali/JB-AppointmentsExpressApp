@@ -1,0 +1,196 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montaga', serif;
+}
+
+.title
+{
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 40px;
+    background: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.container
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 90%;
+    padding: 5%;
+    border: 1px gray solid;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    justify-content: center;
+}
+
+.form-container
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 90%;
+    padding: 5%;
+    border: 1px #cbe7ff solid;
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
+
+input[type=text]
+{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+input[type=time] 
+{
+    width: 100%;
+    padding: 12px 50px;
+    margin: 8px 0;
+    box-sizing: border-box; 
+    font-size: 20px;  
+}
+
+.btn-hover {
+    width: 160px;
+    font-size: 13px;
+    /* font-weight: 600; */
+    color: #fff;
+    cursor: pointer;
+    margin: 10px;
+    height: 30px;
+    text-align: center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:hover {
+    background-position: 100% 0;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:focus {
+    outline: none;
+}
+
+.btn-hover.color-2 {
+    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+    box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 1);
+}
+
+.calendar-container
+{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 10px;
+    justify-content: space-evenly;
+}
+
+.calendar:first-child
+{
+    margin-right: 10px;
+}
+
+.meetings-details
+{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 10px;
+}
+
+.meeting-input
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 10px;
+}
+
+div.meeting-details > div:nth-child(2) > input[type=text]
+{
+    width: 80%;
+}
+
+.dropbtn {
+    background-image: linear-gradient(to right, #25aae1, #3f86ed);
+    box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 1);    
+    color: white;
+    padding: 15px;
+    font-size: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+
+  .dropdown:hover .dropbtn 
+  {
+    background-color: linear-gradient(to right, #25aae1, #3f86ed);
+  }
+
+  .opt
+  {
+      color: #3f86ed;
+  }
+
+
+
+  .cards-container
+  {
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      flex-direction: row;
+  }
+
+  .card
+  {
+      padding: 10px;
+      width: calc(100% / 6);
+      border: 1px solid #4481eb;
+      border-radius: 20px;
+      background-color: linear-gradient(120deg, rgba(22,219,235,1) 0%, rgba(28,172,184,1) 100%);
+      margin-bottom: 20px;
+      margin-right: 10px;
+  }
+
+  .update
+  {
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .card div
+  {
+      margin-bottom: 10px;
+      text-align: start;
+  }
+
+  .card form
+  {
+      text-align: end;
+  }
