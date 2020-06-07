@@ -12,7 +12,7 @@
     <div class="container">
         <h1 class="title">Meetings' Selection </h1>
         <div class="form-container">
-            <form action="/meetings" method="get">
+            <form action="/" method="post">
                 <div class="calendar-container">
                     <div class="calendar">
                         <h3>From : </h3>
@@ -31,8 +31,8 @@
                         <input type="text" placeholder="Enter Room Number ... " name="room">
                         <div class="dropdown">
                             <select name="team" class="dropbtn">
-                                <% for(var j=0; j < teams.length; j++) { %>
-                                    <option class="opt" value="<%= teams[j] %>"> 
+                                <% for(var j=0; j < teams.length; j++) { let i = j %>
+                                    <option class="opt" value="<%= ++i %>"> 
                                         <%= teams[j] %> 
                                     </option>
                                 <% } %>
@@ -42,10 +42,8 @@
                 </div>
 
                 <input type="submit" class="btn-hover color-2" value="Add Meeting">
-                <input type="submit" class="btn-hover color-2" value="Show All Meeting">
             </form>
         </div>
-
 
         <div class="cards-container">
             <% for(var i=0; i < ans.length; i++) { %>
@@ -54,8 +52,8 @@
                 <div class="room"> Room :  <%= ans[i].room %> </div>
                 <div class="from"> From :  <%= ans[i].fromDate %> </div>
                 <div class="to">   To  :  <%= ans[i].toDate %> </div>
-                <div class="team"> Team :  <%= ans[i].team_id %> </div>
-                <form action="" method="post">
+                <div class="team"> Team :  <%= ans[i].name %> </div>
+                <form action="/" method="post">
                     <input class="update btn-hover color-2" value="Update Meeting" type="submit">
                 </form>
             </div>
