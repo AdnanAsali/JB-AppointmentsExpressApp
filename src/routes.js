@@ -32,12 +32,12 @@ router.get('/', (req, res) =>
   });
 });
 
-var filterResult = (resJson, wantedUnique) => 
+var filterResult = (resJson) => 
 {
   
   resJson.forEach(el => 
   {
-    teamsArray.push(el.wantedUnique);
+    teamsArray.push(el.name);
   });
 
   let uniqueSet = new Set(teamsArray);
